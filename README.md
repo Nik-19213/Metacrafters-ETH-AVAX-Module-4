@@ -1,23 +1,22 @@
-# Connecting to Avalanche with Hardhat
+# Degen(DGN) Token - Smart Contract
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+The DegenToken contract is an ERC20 token smart contract that enables Rewards system using crypto token and various other functionalities for players in the Degen Gaming platform. The contract is designed to provide the following features:
 
-🌟 A comprehensive guide on connecting to Avalanche using Hardhat for seamless development and testing. 🚀
+    Minting new tokens: The platform owner can create new tokens and distribute them as rewards to players. Only the contract owner has the authority to mint tokens.
 
-## Table of Contents
+    Transferring tokens: Players can transfer their tokens to others. They can initiate token transfers to any address by specifying the recipient and the amount of tokens they wish to transfer.
 
-- [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [Why Avalanche and Hardhat?](#why-avalanche-and-hardhat)
-- [Different Chains on Avalanche](#different-chains-on-avalanche)
-- [Folder Structure](#folder-structure)
-- [Setup and Configuration](#setup-and-configuration)
-- [Deploying Smart Contracts](#deploying-smart-contracts)
-- [Verifying Smart Contracts](#verifying-smart-contracts)
-- [Conclusion](#conclusion)
-- [License](#license)
+    Redeeming tokens: Players can redeem their tokens for items in the in-game store. The contract provides a list of available items that can be redeemed using the corresponding token values.
 
-## Introduction
+    Checking token balance: Players can check their token balance at any time by calling the checkBalance function. It returns the balance of tokens held by the caller's address.
+
+    Burning tokens: Any token holder can burn their own tokens if they are no longer needed. The burnTokens function allows token holders to burn a specific amount of tokens from their own balance.
+
+    Banning and Unbanning Accounts: The platform owner can ban an account on some suspicious activity or unethical Behaviour, and only owner can also unban the account.
+
+    Pause and Unpause: The platform owner can pause the functioning of smart contract for security concerns and can also unpause it when needed.
+
+## Guide to connect
 
 Welcome to the guide on connecting to Avalanche, a high-performance blockchain platform, using Hardhat, a popular development environment for Ethereum smart contracts. This guide will walk you through the necessary steps to get started, deploy smart contracts, and interact with the Avalanche ecosystem.
 
@@ -28,37 +27,6 @@ Before you begin, ensure you have the following prerequisites:
 1. Node.js installed (version X.X.X or higher)
 2. Basic knowledge of Ethereum and smart contracts
 3. Familiarity with the command line interface (CLI)
-
-## Why Avalanche and Hardhat?
-
-**Avalanche** is a next-generation blockchain platform that provides high scalability, low fees, and fast transaction finality. It offers a rich ecosystem for building decentralized applications, DeFi protocols, and various other use cases. Avalanche's flexibility, interoperability, and robustness make it an attractive choice for developers.
-
-**Hardhat** is a powerful development environment for Ethereum smart contracts. While it is primarily designed for Ethereum, it can be configured to work seamlessly with Avalanche. Hardhat offers advanced features like testing, debugging, and deployment automation, making it an ideal choice for Avalanche development.
-
-
-## Different Chains on Avalanche
-
-Avalanche supports multiple chains, each serving different purposes within its ecosystem. Here are some of the prominent chains on Avalanche:
-
-
-
-- **Exchange** Chain, or the **X-Chain**, is where all the action happens with digital smart assets known as Avalanche Native Tokens.
-
-- **Contract** Chain, or the **C-Chain**, is an implementation of the Ethereum Virtual Machine (EVM) where you can flex your Solidity skills and create and execute smart contracts.
-
-- **Platform** Chain, or the **P-Chain**, is where the magic happens 🧙‍♂️, supporting the creation of new blockchains and subnets, staking operations, and more.
-
-
--  **Fuji Chain**: The Fuji Chain is Avalanche's  testnet, allowing developers to test their applications and smart contracts in a safe and controlled environment. It replicates the functionality of the mainnet but operates on test tokens to prevent real asset loss.
-
-### 🏔️ Fuji Chain
-
-Fuji Chain is Avalanche's dedicated testnet environment, designed specifically for developers and testers. It provides a sandboxed network where you can experiment, deploy contracts, and test applications without incurring real financial risks. The Fuji Chain closely mirrors the mainnet's architecture and functionality, allowing developers to ensure the reliability and correctness of their code before deploying it to the live network.
-
-### 💦 Testnet Faucet
-
-A testnet faucet is a tool or service that provides developers with free test tokens or cryptocurrencies for use on testnets like the Avalanche Fuji Chain. These test tokens have no real value and are solely meant for testing and development purposes. Testnet faucets help developers acquire the necessary tokens to deploy, interact with smart contracts, and simulate real-world scenarios without spending actual funds.
-You can get testnet funds here :https://core.app/tools/testnet-faucet/?subnet=c&token=c
 
 ## Folder Structure
 
@@ -108,10 +76,6 @@ $ npx hardhat
 ```shell
 $ npm i --save-dev @nomicfoundation/hardhat-toolbox
 ```
-
-The Hardhat Toolbox plugin (@nomicfoundation/hardhat-toolbox) is a useful addition to the Hardhat development environment. 
-It offers various utility tasks and helpers that enhance smart contract development on a network. It provides features such as contract interaction and testing utilities, deployment automation, network management, task automation, and an improved development experience. 
-By using the Hardhat Toolbox plugin, you can streamline your development workflow, automate common tasks, and improve efficiency when working with smart contracts on Avalanche.
 
 ### Step 2: Project Configuration
 
@@ -178,7 +142,6 @@ module.exports = {
 ## Deploying Smart Contracts
 
 
-
 1. In the `scripts/` directory, create a deployment script, e.g., `deploy.js`. Use the following template:
 
 ```javascript
@@ -243,12 +206,12 @@ $ npx hardhat verify <contract_address> --network fuji
 
 ## Conclusion
 
-Congratulations! You have successfully connected to Avalanche using Hardhat. Now you can start developing, deploying, and interacting with smart contracts on the Avalanche blockchain. Feel free to explore the rich ecosystem of Avalanche and leverage the power of Hardhat for seamless development and testing.
+Congratulations! You have successfully connected to Avalanche using Hardhat and deployed your contract, now you can interact with your contract in Remix IDE by selecting the injected provider-metamask, and providing the contracts deployement address in `At Address` column.
 
-For detailed usage instructions and additional functionalities, refer to the Hardhat and Avalanche documentation.
+For detailed usage instructions and additional functionalities, refer to the Hardhat, openzeppelin and Avalanche documentation.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code according to your needs.
+This project is licensed under the [MIT License](LICENSE).
 
 ---
