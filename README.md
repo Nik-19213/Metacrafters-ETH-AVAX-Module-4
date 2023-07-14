@@ -12,9 +12,6 @@ The DegenToken contract is an ERC20 token smart contract that enables Rewards sy
 
     Burning tokens: Any token holder can burn their own tokens if they are no longer needed. The burnTokens function allows token holders to burn a specific amount of tokens from their own balance.
 
-    Banning and Unbanning Accounts: The platform owner can ban an account on some suspicious activity or unethical Behaviour, and only owner can also unban the account.
-
-    Pause and Unpause: The platform owner can pause the functioning of smart contract for security concerns and can also unpause it when needed.
 
 ## Guide to connect
 
