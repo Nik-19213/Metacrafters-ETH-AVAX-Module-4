@@ -2,16 +2,17 @@
 
 The DegenToken contract is an ERC20 token smart contract that enables Rewards system using crypto token and various other functionalities for players in the Degen Gaming platform. The contract is designed to provide the following features:
 
-    Minting new tokens: The platform owner can create new tokens and distribute them as rewards to players. Only the contract owner has the authority to mint tokens.
+- Minting new tokens: The platform owner can create new tokens and distribute them as rewards to players. Only the contract owner has the authority to mint tokens.
 
-    Transferring tokens: Players can transfer their tokens to others. They can initiate token transfers to any address by specifying the recipient and the amount of tokens they wish to transfer.
+- Transferring tokens: Players can transfer their tokens to others. They can initiate token transfers to any address by specifying the recipient and the amount of tokens they wish to transfer.
 
-    Redeeming tokens: Players can redeem their tokens for items in the in-game store. The contract provides a list of available items that can be redeemed using the corresponding token values.
+- Redeeming tokens: Players can redeem their tokens for items in the in-game store. The contract provides a list of available items that can be redeemed using the corresponding token values.
 
-    Checking token balance: Players can check their token balance at any time by calling the checkBalance function. It returns the balance of tokens held by the caller's address.
+- Checking token balance: Players can check their token balance at any time by calling the `checkBalance` function. It returns the balance of tokens held by the caller's address.
 
-    Burning tokens: Any token holder can burn their own tokens if they are no longer needed. The burnTokens function allows token holders to burn a specific amount of tokens from their own balance.
+- Burning tokens: Any token holder can burn their own tokens if they are no longer needed. The `burnTokens` function allows token holders to burn a specific amount of tokens from their own balance.
 
+- Banning and Unbanning accounts: The platform owner can Ban an account due to suspicious activity or unethical behaviour, and only owner can also un-ban an account.
 
 ## Guide to connect
 
