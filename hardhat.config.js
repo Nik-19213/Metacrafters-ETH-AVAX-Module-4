@@ -19,7 +19,7 @@ if (FORK_FUJI) {
 module.exports = {
   solidity: "0.8.18",
   etherscan: {
-    apiKey: "HS3BI6HDI6H4QSGF1BZ6HBEIT3DNHUDG1S"
+    apiKey: // "Your API Key Here"
   },
   networks: {
     hardhat: {
@@ -32,7 +32,7 @@ module.exports = {
       gasPrice: 225000000000,
       chainId: 43113,
       accounts: [
-        "59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d"
+        // "Your Private Key Here"
       ]
     },
     mainnet: {
@@ -40,7 +40,7 @@ module.exports = {
       gasPrice: 225000000000,
       chainId: 43114,
       accounts: [
-        "59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d"
+        // "Your Private Key Here"
       ]
     }
   }
